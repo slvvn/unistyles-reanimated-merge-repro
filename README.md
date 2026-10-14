@@ -7,11 +7,11 @@ pnpm install
 pnpm ios      # or: pnpm android
 ```
 
-![withUnistyles(Animated.View) on unistyles 3.5.2: only box a renders, boxes b–d render nothing.](demo.gif)
+![Each case passes the same style to Animated.View (left) and withUnistyles(Animated.View) (right). Only case a renders on the right; b–d stay empty while the left boxes move.](demo.gif)
 
-react-native-unistyles 3.5.2 on the iOS 26.5 simulator.
+react-native-unistyles 3.5.2 on the iOS 26.5 simulator. Each row passes the same `style` to a plain `Animated.View` (left, what it should look like) and to `withUnistyles(Animated.View)` (right). The dashed outline marks where the box should be.
 
-`src/App.tsx` renders four `withUnistyles(Animated.View)` boxes:
+`src/App.tsx` renders four cases on both components. On the `withUnistyles(Animated.View)` side:
 
 | Case | `style` | Expected | Actual |
 |---|---|---|---|
