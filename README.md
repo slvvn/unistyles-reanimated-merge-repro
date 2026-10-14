@@ -1,10 +1,10 @@
 # withUnistyles(Animated.View) drops styles merged with an animated style
 
-Versions: react-native-unistyles 3.3.0, react-native-reanimated 4.5.1, react-native-worklets 0.10.1, expo 57.0.12, react-native 0.86.2. Seen on the iOS 26.5 simulator.
+Versions: react-native-unistyles 3.5.2, react-native-nitro-modules 0.37.1, react-native-reanimated 4.7.1, react-native-worklets 0.13.0, expo 57.0.12, react-native 0.86.2. Seen on the iOS 26.5 simulator and an Android 11 (API 30) emulator; first found on unistyles 3.3.0 with reanimated 4.5.1.
 
 ```bash
 pnpm install
-pnpm ios
+pnpm ios      # or: pnpm android
 ```
 
 `src/App.tsx` renders four `withUnistyles(Animated.View)` boxes:
@@ -18,4 +18,4 @@ pnpm ios
 
 The same arrays on a plain `Animated.View`, or on `Animated.createAnimatedComponent(withUnistyles(View))`, render correctly.
 
-Cause: `getSecrets` in `src/components/native/withUnistyles/withUnistyles.native.tsx` merges the style array into one object with `Object.assign`. The merged object picks up the animated style's `viewDescriptors`, so Reanimated treats the whole object as an animated style and ignores the other keys; a second animated style overwrites the first one's keys.
+Cause: `getSecrets` in `src/core/withUnistyles/withUnistyles.native.tsx` merges the style array into one object with `Object.assign`. The merged object picks up the animated style's `viewDescriptors`, so Reanimated treats the whole object as an animated style and ignores the other keys; a second animated style overwrites the first one's keys.
