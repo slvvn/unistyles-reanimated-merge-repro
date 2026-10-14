@@ -7,7 +7,7 @@ pnpm install
 pnpm ios      # or: pnpm android
 ```
 
-![Each case passes the same style to Animated.View (left) and withUnistyles(Animated.View) (right). Only case a renders on the right; b–d stay empty while the left boxes move.](demo.gif)
+![Each case passes the same style to Animated.View (left) and withUnistyles(Animated.View) (right). Only case a renders on the right; b–d stay empty while the left boxes move.](expected-vs-actual.gif)
 
 react-native-unistyles 3.5.2 on the iOS 26.5 simulator. Each row passes the same `style` to a plain `Animated.View` (left, what it should look like) and to `withUnistyles(Animated.View)` (right). The dashed outline marks where the box should be.
 
