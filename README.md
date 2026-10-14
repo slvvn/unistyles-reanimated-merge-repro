@@ -7,9 +7,9 @@ pnpm install
 pnpm ios      # or: pnpm android
 ```
 
-![Left: unistyles 3.5.2, boxes b–d render nothing. Right: the same app with getSecrets keeping animated styles out of the merge, all four boxes render.](demo.gif)
+![withUnistyles(Animated.View) on unistyles 3.5.2: only box a renders, boxes b–d render nothing.](demo.gif)
 
-Left: react-native-unistyles 3.5.2 as published. Right: the same app with a local patch to `getSecrets` that keeps animated styles out of the merge. iOS 26.5 simulator.
+react-native-unistyles 3.5.2 on the iOS 26.5 simulator.
 
 `src/App.tsx` renders four `withUnistyles(Animated.View)` boxes:
 
